@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="es-AR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Audio Branding | Vertex Studio - Identidad Sonora</title>
+    <meta name="description" content="La identidad sonora de tu marca. Jingles, cortinas, locución y diseño de audio profesional.">
+    <link rel="canonical" href="https://www.vertexdigital.com.ar/audio-branding.html">
+    
+    <!-- CSS BASE COMPLETO + ESTILOS AUDIO -->
+    <style>
+        :root {
+            --bg: #050505; --surface: #0F0F11; --primary: #2D7FF9; 
+            --text: #FFFFFF; --muted: #A1A1AA; --border: rgba(255,255,255,0.08);
+            --font-main: 'Inter', system-ui, sans-serif; --font-display: 'Space Grotesk', system-ui, sans-serif;
+        }
+        @font-face { font-family: 'Inter'; src: url('assets/fonts/inter-regular.woff2') format('woff2'); font-weight: 400; font-display: swap; }
+        @font-face { font-family: 'Space Grotesk'; src: url('assets/fonts/space-grotesk-medium.woff2') format('woff2'); font-weight: 500; font-display: swap; }
+        
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { background: var(--bg); color: var(--text); font-family: var(--font-main); line-height: 1.6; overflow-x: hidden; }
+        a { text-decoration: none; color: inherit; transition: 0.3s ease; }
+        .container { max-width: 1280px; margin: 0 auto; padding: 0 2rem; }
+        
+        header { position: fixed; top: 0; width: 100%; z-index: 1000; background: rgba(5,5,5,0.9); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border); padding: 1.2rem 0; }
+        nav { display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-family: var(--font-display); font-size: 1.5rem; font-weight: 700; letter-spacing: -0.03em; }
+        .logo span { color: var(--primary); }
+        .nav-links { display: flex; gap: 2.5rem; }
+        .nav-links a { font-size: 0.9rem; color: var(--muted); }
+        .nav-links a:hover, .nav-links a.active { color: var(--text); }
+        .mobile-toggle { display: none; font-size: 1.5rem; cursor: pointer; }
+        
+        section { padding: 8rem 0; }
+        .section-title { font-family: var(--font-display); font-size: 2.5rem; margin-bottom: 1rem; }
+        .section-subtitle { color: var(--primary); text-transform: uppercase; letter-spacing: 0.1em; font-size: 0.8rem; font-weight: 600; margin-bottom: 0.5rem; display: block; }
+        
+        footer { border-top: 1px solid var(--border); padding: 4rem 0 2rem; background: var(--surface); }
+        .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 3rem; margin-bottom: 3rem; }
+        .copyright { text-align: center; padding-top: 2rem; border-top: 1px solid var(--border); color: var(--muted); font-size: 0.8rem; }
+        
+        .wa-float { position: fixed; bottom: 2rem; right: 2rem; width: 60px; height: 60px; background: #25D366; border-radius: 50%; display: flex; justify-content: center; align-items: center; font-size: 2rem; color: white; z-index: 999; box-shadow: 0 4px 20px rgba(37,211,102,0.4); }
+        .wa-float:hover { transform: scale(1.1); }
+        
+        .reveal { opacity: 0; transform: translateY(30px); transition: all 0.8s ease-out; }
+        .reveal.active { opacity: 1; transform: translateY(0); }
+
+        /* ESTILOS ESPECÍFICOS AUDIO BRANDING */
+        .audio-filters { display: flex; justify-content: center; gap: 1rem; margin: 3rem 0; flex-wrap: wrap; }
+        .filter-btn { padding: 0.6rem 1.5rem; border-radius: 50px; border: 1px solid var(--border); background: transparent; color: var(--muted); cursor: pointer; transition: 0.3s; }
+        .filter-btn.active, .filter-btn:hover { background: var(--primary); border-color: var(--primary); color: white; }
+        .audio-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(350px, 1fr)); gap: 2rem; }
+        .audio-card { background: var(--surface); border: 1px solid var(--border); padding: 2rem; border-radius: 8px; transition: 0.3s; }
+        .audio-card:hover { border-color: rgba(45,127,249,0.3); }
+        .audio-tag { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--primary); font-weight: 600; margin-bottom: 0.5rem; display: block; }
+        audio { width: 100%; height: 40px; margin-top: 1rem; filter: invert(1) brightness(2); opacity: 0.8; }
+        .benefits-list { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; margin-top: 3rem; }
+        .benefit-item { display: flex; align-items: flex-start; gap: 1rem; }
+        .benefit-icon { color: var(--primary); font-size: 1.2rem; margin-top: 0.2rem; }
+
+        @media (max-width: 968px) {
+            .nav-links { display: none; position: absolute; top: 100%; left: 0; width: 100%; background: var(--surface); flex-direction: column; padding: 2rem; gap: 1.5rem; border-bottom: 1px solid var(--border); }
+            .nav-links.active { display: flex; }
+            .mobile-toggle { display: block; }
+            .footer-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+<!-- HEADER CON ACTIVE EN AUDIO BRANDING -->
+<header>
+    <div class="container">
+        <nav>
+            <a href="index.html" class="logo">VERTEX<span>.</span></a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="nosotros.html">Nosotros</a></li>
+                <li><a href="servicios.html">Servicios</a></li>
+                <li><a href="audio-branding.html" class="active">Audio Branding</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="contacto.html" class="btn btn-primary" style="padding: 0.6rem 1.5rem;">Contacto</a></li>
+            </ul>
+            <div class="mobile-toggle" onclick="document.getElementById('navLinks').classList.toggle('active')"></div>
+        </nav>
+    </div>
+</header>
+
+<main style="padding-top: 120px;">
+    <section style="background: var(--surface);">
+        <div class="container">
+            <div class="reveal" style="text-align: center; max-width: 700px; margin: 0 auto;">
+                <span class="section-subtitle">Identidad Sonora</span>
+                <h1 class="section-title">Audio Branding</h1>
+                <p style="color: var(--muted); margin-top: 1rem;">El sonido construye una identidad emocional capaz de fortalecer el vínculo con tu audiencia. Así como un logotipo identifica visualmente una empresa, el sonido genera reconocimiento inmediato.</p>
+            </div>
+
+            <div class="audio-filters reveal">
+                <button class="filter-btn active" data-filter="all">Todos</button>
+                <button class="filter-btn" data-filter="publicidad">Publicidad</button>
+                <button class="filter-btn" data-filter="vestimenta">Vestimenta</button>
+                <button class="filter-btn" data-filter="jingles">Jingles</button>
+                <button class="filter-btn" data-filter="ivr">IVR</button>
+            </div>
+
+            <div class="audio-grid reveal">
+                <div class="audio-card" data-category="publicidad">
+                    <span class="audio-tag">Publicidad</span>
+                    <h3>Campaña Retail Verano</h3>
+                    <p style="color: var(--muted); font-size: 0.9rem; margin-top: 0.5rem;">Producción comercial dinámica orientada a ventas rápidas con diseño sonoro energético.</p>
+                    <audio controls preload="none"><source src="assets/audio/demo-publicidad.mp3" type="audio/mpeg"></audio>
+                </div>
+                <div class="audio-card" data-category="vestimenta">
+                    <span class="audio-tag">Vestimenta Artística</span>
+                    <h3>Apertura Radio FM</h3>
+                    <p style="color: var(--muted); font-size: 0.9rem; margin-top: 0.5rem;">Identificación institucional moderna con mezcla de voces y efectos atmosféricos.</p>
+                    <audio controls preload="none"><source src="assets/audio/demo-vestimenta.mp3" type="audio/mpeg"></audio>
+                </div>
+                <div class="audio-card" data-category="jingles">
+                    <span class="audio-tag">Jingles Cantados</span>
+                    <h3>Jingle Marca Alimentos</h3>
+                    <p style="color: var(--muted); font-size: 0.9rem; margin-top: 0.5rem;">Composición original pegadiza con estribillo memorable y producción pop moderna.</p>
+                    <audio controls preload="none"><source src="assets/audio/demo-jingles.mp3" type="audio/mpeg"></audio>
+                </div>
+                <div class="audio-card" data-category="ivr">
+                    <span class="audio-tag">IVR Telefónico</span>
+                    <h3>Central Corporativa</h3>
+                    <p style="color: var(--muted); font-size: 0.9rem; margin-top: 0.5rem;">Locución institucional clara y profesional para sistemas de atención automática.</p>
+                    <audio controls preload="none"><source src="assets/audio/demo-ivr.mp3" type="audio/mpeg"></audio>
+                </div>
+            </div>
+
+            <div class="reveal" style="margin-top: 6rem;">
+                <h2 class="section-title" style="text-align: center;">Beneficios del Audio Branding</h2>
+                <div class="benefits-list">
+                    <div class="benefit-item"><span class="benefit-icon">✓</span><div><h4>Mayor recordación</h4><p style="color: var(--muted); font-size: 0.9rem;">El sonido activa la memoria emocional más rápido que la imagen.</p></div></div>
+                    <div class="benefit-item"><span class="benefit-icon">✓</span><div><h4>Identidad única</h4><p style="color: var(--muted); font-size: 0.9rem;">Diferenciación inmediata frente a la competencia.</p></div></div>
+                    <div class="benefit-item"><span class="benefit-icon">✓</span><div><h4>Profesionalismo</h4><p style="color: var(--muted); font-size: 0.9rem;">Transmite calidad y atención al detalle en cada punto de contacto.</p></div></div>
+                    <div class="benefit-item"><span class="benefit-icon">✓</span><div><h4>Experiencia completa</h4><p style="color: var(--muted); font-size: 0.9rem;">Refuerza campañas publicitarias y mejora la percepción de marca.</p></div></div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<!-- FOOTER IDÉNTICO -->
+<footer>
+    <div class="container">
+        <div class="footer-grid">
+            <div>
+                <a href="index.html" class="logo">VERTEX<span>.</span></a>
+                <p style="color: var(--muted); margin-top: 1rem; max-width: 300px;">Soluciones digitales integrales para empresas que buscan liderar su industria.</p>
+            </div>
+            <div>
+                <h5>Navegación</h5>
+                <ul style="list-style: none; margin-top: 1rem;">
+                    <li style="margin-bottom: 0.75rem"><a href="nosotros.html" style="color: var(--muted)">Nosotros</a></li>
+                    <li style="margin-bottom: 0.75rem"><a href="servicios.html" style="color: var(--muted)">Servicios</a></li>
+                    <li style="margin-bottom: 0.75rem"><a href="portfolio.html" style="color: var(--muted)">Portfolio</a></li>
+                </ul>
+            </div>
+            <div>
+                <h5>Contacto</h5>
+                <ul style="list-style: none; margin-top: 1rem; color: var(--muted)">
+                    <li style="margin-bottom: 0.75rem">+54 9 221 602 6192</li>
+                    <li style="margin-bottom: 0.75rem">hola@vertexdigital.com.ar</li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">© 2026 Vertex Studio. Todos los derechos reservados.</div>
+    </div>
+</footer>
+
+<a href="https://wa.me/5492216026192?text=Hola%20Vertex%2C%20me%20interesa%20consultar%20por..." target="_blank" class="wa-float" aria-label="Chat en WhatsApp">💬</a>
+
+<script>
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => { if(entry.isIntersecting) entry.target.classList.add('active'); });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    const audioCards = document.querySelectorAll('.audio-card');
+    filterBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            filterBtns.forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+            const filter = btn.dataset.filter;
+            audioCards.forEach(card => {
+                card.style.display = (filter === 'all' || card.dataset.category === filter) ? 'block' : 'none';
+            });
+        });
+    });
+</script>
+</body>
+</html>
