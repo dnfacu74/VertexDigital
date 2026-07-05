@@ -1,0 +1,50 @@
+# === Sistemas Operativos ===
+.DS_Store
+Thumbs.db
+desktop.ini
+ehthumbs.db
+
+# === Editores de Código ===
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.project
+.classpath
+
+# === Node.js / Build Tools (si usás en futuro) ===
+node_modules/
+dist/
+build/
+coverage/
+.nyc_output/
+package-lock.json
+yarn.lock
+
+# === Variables de Entorno y Secretos (NUNCA subir) ===
+.env
+.env.local
+.env.production
+.env.development
+*.pem
+*.key
+
+# === Logs y Temporales ===
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+logs/
+temp/
+tmp/
+*.bak
+*.old
+*.orig
+
+# === Archivos de Audio/Video Pesados (opcional: si preferís gestionarlos externamente) ===
+# assets/audio/*.mp3
+# assets/video/*.mp4
+# assets/video/*.webm
+
+# === Documentación Interna (no pública) ===
+docs/private/

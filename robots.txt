@@ -1,0 +1,17 @@
+# Robots.txt para Vertex Studio
+# Permite el rastreo completo del sitio público
+
+User-agent: *
+Allow: /
+
+# Bloquea recursos privados o innecesarios para SEO
+Disallow: /assets/audio/
+Disallow: /assets/video/
+Disallow: /docs/
+Disallow: /.github/
+
+# Ubicación del mapa del sitio XML
+Sitemap: https://www.vertexdigital.com.ar/sitemap.xml
+
+# Tiempo de espera entre solicitudes (cortesía)
+Crawl-delay: 10
