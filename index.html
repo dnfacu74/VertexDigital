@@ -7,6 +7,12 @@
     <meta name="description" content="Agencia premium de diseño web, audio branding y producción audiovisual. Soluciones digitales integrales en Argentina.">
     <link rel="canonical" href="https://www.vertexdigital.com.ar/">
     
+    <!-- FAVICONS Y MANIFEST -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="manifest" href="/manifest.json">
+    
     <!-- Open Graph -->
     <meta property="og:title" content="Vertex Studio | Digital • Audio • Video • Web">
     <meta property="og:description" content="Elevamos tu presencia digital con soluciones integrales de tecnología y creatividad.">
@@ -71,6 +77,19 @@
         /* Reveal Animation */
         .reveal { opacity: 0; transform: translateY(30px); transition: all 0.8s ease-out; }
         .reveal.active { opacity: 1; transform: translateY(0); }
+
+        /* VERTEX STUDIO CREDIT STYLES */
+        .vertex-credit {
+            margin-top: 3rem; 
+            padding-top: 2rem; 
+            border-top: 1px solid rgba(255,255,255,0.1); 
+            font-size: 0.85rem; 
+            color: var(--muted); 
+            text-align: center;
+        }
+        .vertex-credit strong { color: var(--text-secondary); }
+        .vertex-credit a { text-decoration: none; transition: color var(--transition-fast); }
+        .vertex-credit a:hover { opacity: 0.8; }
         
         @media (max-width: 968px) {
             .nav-links { display: none; position: absolute; top: 100%; left: 0; width: 100%; background: var(--surface); flex-direction: column; padding: 2rem; gap: 1.5rem; border-bottom: 1px solid var(--border); }
@@ -94,7 +113,7 @@
                 <li><a href="portfolio.html">Portfolio</a></li>
                 <li><a href="contacto.html" class="btn btn-primary" style="padding: 0.6rem 1.5rem;">Contacto</a></li>
             </ul>
-            <div class="mobile-toggle" onclick="document.getElementById('navLinks').classList.toggle('active')"></div>
+            <div class="mobile-toggle" onclick="document.getElementById('navLinks').classList.toggle('active')">☰</div>
         </nav>
     </div>
 </header>
@@ -128,7 +147,7 @@
                     <p style="color: var(--muted)">Sitios corporativos, e-commerce y landing pages optimizadas para conversión.</p>
                 </div>
                 <div class="service-card">
-                    <div class="service-icon"></div>
+                    <div class="service-icon">🎧</div>
                     <h3>Audio Branding</h3>
                     <p style="color: var(--muted)">Identidad sonora, jingles y diseño de experiencia auditiva para marcas.</p>
                 </div>
@@ -165,6 +184,38 @@
                 </ul>
             </div>
         </div>
+        
+        <!-- SECCIÓN LICENCIA Y CONTACTO VERTEX STUDIO -->
+        <div class="vertex-credit">
+            <p style="margin-bottom: 1.5rem; line-height: 1.6;">
+                 <strong>Licencia</strong><br>
+                © 2026 Vertex Studio. Todos los derechos reservados.<br>
+                El código fuente de este repositorio es propiedad exclusiva de Vertex Studio.<br>
+                Queda prohibida su reproducción, distribución o uso comercial sin autorización escrita.
+            </p>
+
+            <div style="display: flex; flex-direction: column; align-items: center; gap: 0.5rem;">
+                <p style="font-weight: 600; color: var(--text-secondary); margin-bottom: 0.5rem;"> Autor y Contacto: Vertex Studio</p>
+                
+                <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 1.5rem;">
+                    <span>📍 La Plata, Buenos Aires, Argentina</span>
+                    
+                    <a href="mailto:hola@vertexdigital.com.ar" style="color: var(--primary);">
+                         hola@vertexdigital.com.ar
+                    </a>
+                    
+                    <a href="https://wa.me/5492216026192" target="_blank" rel="noopener noreferrer" style="color: #25D366;">
+                        📱 WhatsApp: +54 9 221 602 6192
+                    </a>
+                    
+                    <a href="https://www.vertexdigital.com.ar" target="_blank" rel="noopener noreferrer" style="color: var(--primary);">
+                         www.vertexdigital.com.ar
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!-- FIN SECCIÓN VERTEX STUDIO -->
+
         <div class="copyright">© 2026 Vertex Studio. Todos los derechos reservados.</div>
     </div>
 </footer>

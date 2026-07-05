@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <!-- Fondo negro profundo de Vertex -->
+  <rect width="64" height="64" rx="12" fill="#050505"/>
+  
+  <!-- Isotipo V geométrica estilizada -->
+  <path d="M18 16 L32 44 L46 16 L38 16 L32 28 L26 16 Z" fill="#FFFFFF"/>
+  <path d="M38 16 L50 16 L36 44 L28 44 Z" fill="#2D7FF9"/>
+</svg>
