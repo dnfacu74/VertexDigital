@@ -22,10 +22,10 @@ header { position: fixed; top: 0; width: 100%; z-index: 1000; background: rgba(5
 nav { display: flex; justify-content: space-between; align-items: center; }
 .logo { font-family: var(--font-display); font-size: 1.5rem; font-weight: 700; letter-spacing: -0.03em; }
 .logo span { color: var(--primary); }
-.nav-links { display: flex; gap: 2.5rem; }
+.nav-links { display: flex; gap: 2.5rem; list-style: none; }
 .nav-links a { font-size: 0.9rem; color: var(--muted); }
 .nav-links a:hover, .nav-links a.active { color: var(--text); }
-.mobile-toggle { display: none; font-size: 1.5rem; cursor: pointer; }
+.mobile-toggle { display: none; font-size: 1.5rem; cursor: pointer; color: var(--text); }
 section { padding: 8rem 0; }
 .section-title { font-family: var(--font-display); font-size: 2.5rem; margin-bottom: 1rem; }
 .section-subtitle { color: var(--primary); text-transform: uppercase; letter-spacing: 0.1em; font-size: 0.8rem; font-weight: 600; margin-bottom: 0.5rem; display: block; }
@@ -37,18 +37,27 @@ footer { border-top: 1px solid var(--border); padding: 4rem 0 2rem; background: 
 .reveal { opacity: 0; transform: translateY(30px); transition: all 0.8s ease-out; }
 .reveal.active { opacity: 1; transform: translateY(0); }
 
-/* ESTILOS ESPECÍFICOS PORTFOLIO */
-.portfolio-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(350px, 1fr)); gap: 1.5rem; margin-top: 3rem; }
-.portfolio-item { position: relative; aspect-ratio: 4/3; overflow: hidden; border-radius: 8px; cursor: pointer; background: var(--surface); }
-.portfolio-item img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.6s ease; }
-.portfolio-overlay { position: absolute; inset: 0; background: rgba(0,0,0,0.8); display: flex; flex-direction: column; justify-content: center; align-items: center; opacity: 0; transition: 0.3s; padding: 2rem; text-align: center; }
-.portfolio-item:hover img { transform: scale(1.05); }
+/* PORTFOLIO STYLES */
+.portfolio-filters { display: flex; justify-content: center; gap: 1rem; margin: 3rem 0; flex-wrap: wrap; }
+.filter-btn { padding: 0.6rem 1.5rem; border-radius: 50px; border: 1px solid var(--border); background: transparent; color: var(--muted); cursor: pointer; transition: 0.3s; font-family: var(--font-main); }
+.filter-btn.active, .filter-btn:hover { background: var(--primary); border-color: var(--primary); color: white; }
+
+.portfolio-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(350px, 1fr)); gap: 1.5rem; }
+.portfolio-item { position: relative; aspect-ratio: 4/3; overflow: hidden; border-radius: 8px; cursor: pointer; background: var(--surface); border: 1px solid var(--border); }
+.portfolio-item img, .portfolio-item video { width: 100%; height: 100%; object-fit: cover; transition: transform 0.6s ease; }
+.portfolio-overlay { position: absolute; inset: 0; background: rgba(0,0,0,0.85); display: flex; flex-direction: column; justify-content: center; align-items: center; opacity: 0; transition: 0.3s; padding: 2rem; text-align: center; backdrop-filter: blur(4px); }
+.portfolio-item:hover img, .portfolio-item:hover video { transform: scale(1.05); }
 .portfolio-item:hover .portfolio-overlay { opacity: 1; }
 .portfolio-overlay span { color: var(--primary); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 0.5rem; }
+.portfolio-overlay h3 { font-family: var(--font-display); font-size: 1.2rem; }
+
+/* LIGHTBOX MEJORADO PARA VIDEO E IMAGEN */
 .lightbox { position: fixed; inset: 0; background: rgba(0,0,0,0.95); z-index: 2000; display: none; justify-content: center; align-items: center; padding: 2rem; }
 .lightbox.active { display: flex; animation: fadeIn 0.3s ease; }
-.lightbox img { max-height: 90vh; max-width: 90vw; border-radius: 4px; }
-.lightbox-close { position: absolute; top: 2rem; right: 2rem; font-size: 2rem; color: white; cursor: pointer; background: none; border: none; }
+.lightbox-content { max-height: 90vh; max-width: 90vw; border-radius: 4px; box-shadow: 0 0 50px rgba(0,0,0,0.5); }
+.lightbox-close { position: absolute; top: 2rem; right: 2rem; font-size: 2.5rem; color: white; cursor: pointer; background: none; border: none; line-height: 1; z-index: 2001; }
+.lightbox-close:hover { color: var(--primary); }
+
 @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
 
 @media (max-width: 968px) {
@@ -56,11 +65,11 @@ footer { border-top: 1px solid var(--border); padding: 4rem 0 2rem; background: 
 .nav-links.active { display: flex; }
 .mobile-toggle { display: block; }
 .footer-grid { grid-template-columns: 1fr; }
+.portfolio-grid { grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); }
 }
 </style>
 </head>
 <body>
-<!-- HEADER -->
 <header>
 <div class="container">
 <nav>
@@ -73,11 +82,10 @@ footer { border-top: 1px solid var(--border); padding: 4rem 0 2rem; background: 
 <li><a href="portfolio.html" class="active">Portfolio</a></li>
 <li><a href="contacto.html" class="btn btn-primary" style="padding: 0.6rem 1.5rem;">Contacto</a></li>
 </ul>
-<div class="mobile-toggle" onclick="document.getElementById('navLinks').classList.toggle('active')">☰</div>
+<div class="mobile-toggle" onclick="document.getElementById('navLinks').classList.toggle('active')"></div>
 </nav>
 </div>
 </header>
-
 <main style="padding-top: 120px;">
 <section>
 <div class="container">
@@ -85,40 +93,64 @@ footer { border-top: 1px solid var(--border); padding: 4rem 0 2rem; background: 
 <span class="section-subtitle">Trabajos Recientes</span>
 <h1 class="section-title">Del concepto a la pantalla</h1>
 </div>
-<!-- AQUÍ SE ELIMINARON LOS BOTONES DE FILTRO -->
+<div class="portfolio-filters reveal">
+<button class="filter-btn active" data-filter="all">Todos</button>
+<button class="filter-btn" data-filter="web">Diseño Web</button>
+<button class="filter-btn" data-filter="branding">Branding</button>
+<button class="filter-btn" data-filter="video">Video</button>
+<button class="filter-btn" data-filter="audio">Audio</button>
+</div>
 <div class="portfolio-grid reveal">
-<!-- ITEM 1: WEB -->
-<div class="portfolio-item" data-full="assets/img/portfolio/portfolio-web-01.webp">
-<img src="assets/img/portfolio/portfolio-web-01-thumb.webp" alt="Proyecto Web Fintech" loading="lazy">
-<div class="portfolio-overlay"><span>Diseño Web</span><h3>Fintech App Dashboard</h3></div>
-</div>
-<!-- ITEM 2: BRANDING -->
-<div class="portfolio-item" data-full="assets/img/portfolio/portfolio-branding-01.webp">
-<img src="assets/img/portfolio/portfolio-branding-01-thumb.webp" alt="Branding Corporativo" loading="lazy">
-<div class="portfolio-overlay"><span>Branding</span><h3>Architects Bureau Identity</h3></div>
-</div>
-<!-- ITEM 3: VIDEO -->
-<div class="portfolio-item" data-full="assets/img/portfolio/portfolio-video-01.webp">
-<img src="assets/img/portfolio/portfolio-video-01-thumb.webp" alt="Producción Audiovisual" loading="lazy">
-<div class="portfolio-overlay"><span>Video</span><h3>Spot Publicitario Summer</h3></div>
-</div>
-<!-- ITEM 4: AUDIO -->
-<div class="portfolio-item" data-full="assets/img/portfolio/portfolio-audio-01.webp">
-<img src="assets/img/portfolio/portfolio-audio-01-thumb.webp" alt="Audio Branding" loading="lazy">
-<div class="portfolio-overlay"><span>Audio</span><h3>Radio Station Rebrand</h3></div>
-</div>
+    
+    <!-- VIDEO SHOWREEL (CORREGIDO) -->
+    <div class="portfolio-item" data-category="video" data-type="video" data-src="assets/video/showreel-2026.mp4">
+        <video src="assets/video/showreel-2026.mp4" muted loop playsinline preload="metadata" poster="assets/img/portfolio/portfolio-video-01-thumb.webp"></video>
+        <div class="portfolio-overlay"><span>Video</span><h3>Video Spot Publicitario</h3></div>
+    </div>
+
+    <!-- BRANDING CORPORATIVO (CORREGIDO) -->
+    <div class="portfolio-item" data-category="branding" data-type="image" data-src="assets/img/portfolio/branding-corporativo.jpg">
+        <img src="assets/img/portfolio/branding-corporativo.jpg" alt="Branding Corporativo" loading="lazy">
+        <div class="portfolio-overlay"><span>Branding</span><h3>Branding Corporativo</h3></div>
+    </div>
+
+    <!-- WEB FINTECH -->
+    <div class="portfolio-item" data-category="web" data-type="image" data-src="assets/img/portfolio/portfolio-web-01.jpg">
+        <img src="assets/img/portfolio/portfolio-web-01-thumb.jpg" alt="Proyecto Web Fintech" loading="lazy">
+        <div class="portfolio-overlay"><span>Diseño Web</span><h3>Fintech App Dashboard</h3></div>
+    </div>
+
+    <!-- AUDIO RADIO STATION (CORREGIDO CON REPRODUCTOR) -->
+    <div class="portfolio-item" data-category="audio" data-type="audio" data-src="assets/audio/radio-station-rebrand.mp3">
+        <img src="assets/img/portfolio/portfolio-audio-01.jpg" alt="Audio Branding Radio" loading="lazy">
+        <div class="portfolio-overlay"><span>Audio</span><h3>Radio Station Rebrand</h3></div>
+    </div>
+
+    <!-- OTROS PROYECTOS DE VIDEO -->
+    <div class="portfolio-item" data-category="video" data-type="video" data-src="assets/video/portfolio-video-01.mp4">
+        <video src="assets/video/portfolio-video-01.mp4" muted loop playsinline preload="metadata"></video>
+        <div class="portfolio-overlay"><span>Video</span><h3>Producción Institucional</h3></div>
+    </div>
+
+    <!-- OTROS PROYECTOS DE BRANDING -->
+    <div class="portfolio-item" data-category="branding" data-type="image" data-src="assets/img/portfolio/portfolio-branding-01.jpg">
+        <img src="assets/img/portfolio/portfolio-branding-01.jpg" alt="Architects Bureau Identity" loading="lazy">
+        <div class="portfolio-overlay"><span>Branding</span><h3>Architects Bureau Identity</h3></div>
+    </div>
+
 </div>
 </div>
 </section>
 </main>
 
-<!-- LIGHTBOX MODAL -->
+<!-- LIGHTBOX MODAL UNIVERSAL -->
 <div class="lightbox" id="lightbox">
 <button class="lightbox-close">&times;</button>
-<img src="" alt="Vista ampliada" id="lightbox-img">
+<div id="lightbox-container" style="display:flex; justify-content:center; align-items:center; width:100%; height:100%;">
+    <!-- El contenido se inyecta vía JS -->
+</div>
 </div>
 
-<!-- FOOTER -->
 <footer>
 <div class="container">
 <div class="footer-grid">
@@ -145,39 +177,90 @@ footer { border-top: 1px solid var(--border); padding: 4rem 0 2rem; background: 
 <div class="copyright">© 2026 Vertex Studio. Todos los derechos reservados.</div>
 </div>
 </footer>
-
 <a href="https://wa.me/5492216026192?text=Hola%20Vertex%2C%20me%20interesa%20consultar%20por..." target="_blank" class="wa-float" aria-label="Chat en WhatsApp">💬</a>
 
 <script>
-// Scroll Reveal
+// Observer para animaciones
 const observer = new IntersectionObserver((entries) => {
 entries.forEach(entry => { if(entry.isIntersecting) entry.target.classList.add('active'); });
 }, { threshold: 0.1 });
 document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 
-// Lightbox Logic (Se mantiene porque es útil para ver las fotos en grande)
-const lightbox = document.getElementById('lightbox');
-const lightboxImg = document.getElementById('lightbox-img');
+// Filtros Portfolio
+const filterBtns = document.querySelectorAll('.filter-btn');
 const portfolioItems = document.querySelectorAll('.portfolio-item');
+filterBtns.forEach(btn => {
+btn.addEventListener('click', () => {
+filterBtns.forEach(b => b.classList.remove('active'));
+btn.classList.add('active');
+const filter = btn.dataset.filter;
+portfolioItems.forEach(item => {
+item.style.display = (filter === 'all' || item.dataset.category === filter) ? 'block' : 'none';
+});
+});
+});
+
+// Lightbox Inteligente (Video, Imagen o Audio)
+const lightbox = document.getElementById('lightbox');
+const lightboxContainer = document.getElementById('lightbox-container');
+const lightboxClose = document.querySelector('.lightbox-close');
 
 portfolioItems.forEach(item => {
 item.addEventListener('click', () => {
-lightboxImg.src = item.dataset.full;
+const type = item.dataset.type;
+const src = item.dataset.src;
+lightboxContainer.innerHTML = ''; // Limpiar anterior
+
+if (type === 'video') {
+    const vid = document.createElement('video');
+    vid.src = src;
+    vid.controls = true;
+    vid.autoplay = true;
+    vid.className = 'lightbox-content';
+    vid.style.maxHeight = '85vh';
+    lightboxContainer.appendChild(vid);
+} else if (type === 'audio') {
+    const aud = document.createElement('audio');
+    aud.src = src;
+    aud.controls = true;
+    aud.autoplay = true;
+    aud.className = 'lightbox-content';
+    aud.style.width = '100%';
+    aud.style.maxWidth = '600px';
+    lightboxContainer.appendChild(aud);
+} else {
+    const img = document.createElement('img');
+    img.src = src;
+    img.alt = 'Vista ampliada';
+    img.className = 'lightbox-content';
+    lightboxContainer.appendChild(img);
+}
+
 lightbox.classList.add('active');
 document.body.style.overflow = 'hidden';
 });
-});
 
-document.querySelector('.lightbox-close').addEventListener('click', () => {
-lightbox.classList.remove('active');
-document.body.style.overflow = 'auto';
-});
-
-lightbox.addEventListener('click', (e) => {
-if(e.target === lightbox) { 
-lightbox.classList.remove('active'); 
-document.body.style.overflow = 'auto'; 
+// Autoplay videos en hover solo si no están en lightbox
+const vid = item.querySelector('video');
+if(vid) {
+    item.addEventListener('mouseenter', () => vid.play().catch(()=>{}));
+    item.addEventListener('mouseleave', () => { vid.pause(); vid.currentTime = 0; });
 }
+});
+
+function closeLightbox() {
+lightbox.classList.remove('active');
+lightboxContainer.innerHTML = ''; // Detener reproducción
+document.body.style.overflow = 'auto';
+}
+
+lightboxClose.addEventListener('click', closeLightbox);
+lightbox.addEventListener('click', (e) => {
+if(e.target === lightbox || e.target === lightboxContainer) closeLightbox();
+});
+
+document.addEventListener('keydown', (e) => {
+if(e.key === 'Escape' && lightbox.classList.contains('active')) closeLightbox();
 });
 </script>
 </body>
