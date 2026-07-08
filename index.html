@@ -31,7 +31,6 @@ a { text-decoration: none; color: inherit; transition: 0.3s ease; }
 /* Header & Nav */
 header { position: fixed; top: 0; width: 100%; z-index: 1000; background: rgba(5,5,5,0.9); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border); padding: 1.2rem 0; }
 nav { display: flex; justify-content: space-between; align-items: center; }
-/* LOGO MAS GRANDE */
 .logo { font-family: var(--font-display); font-size: 1.8rem; font-weight: 700; letter-spacing: -0.03em; }
 .logo span { color: var(--primary); }
 .nav-links { display: flex; gap: 2.5rem; list-style: none; }
@@ -46,15 +45,39 @@ nav { display: flex; justify-content: space-between; align-items: center; }
 section { padding: 8rem 0; }
 .section-title { font-family: var(--font-display); font-size: 2.5rem; margin-bottom: 1rem; }
 .section-subtitle { color: var(--primary); text-transform: uppercase; letter-spacing: 0.1em; font-size: 0.8rem; font-weight: 600; margin-bottom: 0.5rem; display: block; }
-/* HERO SECTION CORREGIDO */
+/* HERO SECTION CON LOGO TRANSPARENTE */
 .hero {
-min-height: 100vh; display: flex; align-items: center; position: relative;
-background-image: linear-gradient(rgba(5,5,5,0.7), rgba(5,5,5,0.9)), url('assets/img/hero-bg.jpg');
+min-height: 100vh; display: flex; align-items: center; justify-content: center; position: relative;
+background-image: linear-gradient(rgba(5,5,5,0.85), rgba(5,5,5,0.95)), url('assets/img/hero-bg.jpg');
 background-size: cover; background-position: center; background-attachment: fixed;
+text-align: center;
 }
-.hero-content { max-width: 800px; position: relative; z-index: 2; }
-.hero h1 { font-family: var(--font-display); font-size: 4rem; line-height: 1.1; margin-bottom: 1.5rem; }
+.hero-content { max-width: 900px; position: relative; z-index: 2; display: flex; flex-direction: column; align-items: center; }
+.hero-logo {
+    max-width: 350px; /* Tamaño grande para el logo */
+    width: 100%;
+    height: auto;
+    margin-bottom: 2rem;
+    filter: drop-shadow(0 0 20px rgba(45,127,249,0.3));
+}
+.hero h1 { font-family: var(--font-display); font-size: 3.5rem; line-height: 1.1; margin-bottom: 1.5rem; }
 .hero p { font-size: 1.2rem; color: var(--muted); margin-bottom: 2.5rem; max-width: 600px; }
+/* SECCIÓN NUESTRA ESENCIA */
+.essence-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+    margin-top: 2rem;
+}
+.essence-img {
+    width: 100%;
+    border-radius: 12px;
+    border: 1px solid var(--border);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+    transition: transform 0.3s ease;
+}
+.essence-img:hover { transform: scale(1.02); }
 /* NUEVA SECCIÓN: TIPOS DE PÁGINAS WEB */
 .web-types-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 2rem; margin-top: 3rem; }
 .web-type-card {
@@ -95,7 +118,9 @@ footer { border-top: 1px solid var(--border); padding: 4rem 0 2rem; background: 
 .mobile-toggle { display: block; }
 .footer-grid { grid-template-columns: 1fr; }
 .hero h1 { font-size: 2.5rem; }
-.hero { background-attachment: scroll; } /* Mejor rendimiento en móvil */
+.hero { background-attachment: scroll; }
+.essence-grid { grid-template-columns: 1fr; }
+.hero-logo { max-width: 250px; }
 }
 @media (max-width: 768px) {
 .hero { background-image: linear-gradient(rgba(5,5,5,0.8), rgba(5,5,5,0.95)), url('assets/img/hero-bg-mobile.jpg'); }
@@ -112,7 +137,6 @@ footer { border-top: 1px solid var(--border); padding: 4rem 0 2rem; background: 
 <li><a href="nosotros.html">Nosotros</a></li>
 <li><a href="servicios.html">Servicios</a></li>
 <li><a href="audio-branding.html">Audio Branding</a></li>
-<!-- NUEVO ENLACE VOCES -->
 <li><a href="voces.html">Voces</a></li>
 <li><a href="portfolio.html">Portfolio</a></li>
 <li><a href="contacto.html" class="btn btn-primary" style="padding: 0.6rem 1.5rem;">Contacto</a></li>
@@ -122,15 +146,41 @@ footer { border-top: 1px solid var(--border); padding: 4rem 0 2rem; background: 
 </div>
 </header>
 <main>
-<!-- HERO SECTION -->
+<!-- HERO SECTION CON LOGO TRANSPARENTE -->
 <section class="hero">
 <div class="container hero-content reveal">
-<span class="section-subtitle">Agencia Digital Integral</span>
-<h1>Elevamos tu presencia digital</h1>
-<p>Diseño web estratégico, identidad sonora y producción audiovisual de alto impacto para marcas que lideran.</p>
-<a href="contacto.html" class="btn btn-primary">Iniciar Proyecto</a>
+    <!-- LOGO GRANDE EN PORTADA -->
+    <img src="assets/img/portfolio/transparente.png" alt="Vertex Studio Logo" class="hero-logo" onerror="this.style.display='none'">
+    
+    <span class="section-subtitle">Agencia Digital Integral</span>
+    <h1>Elevamos tu presencia digital</h1>
+    <p>Diseño web estratégico, identidad sonora y producción audiovisual de alto impacto para marcas que lideran.</p>
+    <a href="contacto.html" class="btn btn-primary">Iniciar Proyecto</a>
 </div>
 </section>
+
+<!-- SECCIÓN NUESTRA ESENCIA -->
+<section>
+    <div class="container">
+        <div class="essence-grid reveal">
+            <div>
+                <span class="section-subtitle">Filosofía de Trabajo</span>
+                <h2 class="section-title">Nuestra Esencia</h2>
+                <p style="color: var(--muted); font-size: 1.1rem; margin-bottom: 1.5rem;">
+                    En Vertex Studio creemos que la tecnología debe ser invisible y la creatividad ilimitada. Nuestra esencia radica en la fusión perfecta entre estrategia técnica y expresión artística.
+                </p>
+                <p style="color: var(--muted); font-size: 1.1rem;">
+                    No solo construimos sitios web o producimos audio; diseñamos experiencias que conectan emocionalmente con tu audiencia. Cada píxel y cada frecuencia están pensados para contar tu historia de la manera más impactante posible.
+                </p>
+            </div>
+            <div>
+                <!-- IMAGEN REUNION.PNG -->
+                <img src="assets/img/portfolio/reunion.png" alt="Equipo Vertex en reunión creativa" class="essence-img" onerror="this.src='https://placehold.co/800x600/0F0F11/2D7FF9?text=Nuestra+Esencia'">
+            </div>
+        </div>
+    </div>
+</section>
+
 <!-- NUEVA SECCIÓN: TIPOS DE PÁGINAS WEB -->
 <section>
 <div class="container">
