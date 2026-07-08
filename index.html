@@ -3,241 +3,397 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Vertex Studio | Soluciones Digitales Integrales</title>
-<meta name="description" content="Diseño web, audio branding, producción audiovisual y marketing digital. Elevamos tu presencia digital con soluciones creativas y estratégicas.">
-<link rel="canonical" href="https://www.vertexdigital.com.ar/">
+<title>Staff de Locutores | Radio del Bosque La Plata</title>
+<meta name="description" content="Conocé al staff profesional de locutores de Radio del Bosque La Plata. Voces institucionales, conductoras y periodistas con trayectoria nacional.">
+<link rel="canonical" href="https://www.vertexdigital.com.ar/staff.html">
+
 <!-- Open Graph / Facebook -->
 <meta property="og:type" content="website">
-<meta property="og:url" content="https://www.vertexdigital.com.ar/">
-<meta property="og:title" content="Vertex Studio | Soluciones Digitales">
-<meta property="og:description" content="Elevamos tu presencia digital. Diseño, Audio y Video profesional.">
-<meta property="og:image" content="assets/img/og/vertex-og.jpg">
+<meta property="og:url" content="https://www.vertexdigital.com.ar/staff.html">
+<meta property="og:title" content="Staff de Locutores | Radio del Bosque La Plata">
+<meta property="og:description" content="Equipo profesional de voces y conducción. Escuchá sus demos y conocé su trayectoria.">
+<meta property="og:image" content="assets/img/og/staff-og.jpg">
+
 <!-- Favicon -->
 <link rel="icon" type="image/png" href="assets/icons/favicon.png">
+
 <style>
-:root {
---bg: #050505; --surface: #0F0F11; --primary: #2D7FF9;
---text: #FFFFFF; --muted: #A1A1AA; --border: rgba(255,255,255,0.08);
---font-main: 'Inter', system-ui, sans-serif;
---font-display: 'Space Grotesk', system-ui, sans-serif;
-}
-/* Fuentes base */
-@font-face { font-family: 'Inter'; src: url('assets/fonts/inter-regular.woff2') format('woff2'); font-weight: 400; font-display: swap; }
-@font-face { font-family: 'Space Grotesk'; src: url('assets/fonts/space-grotesk-medium.woff2') format('woff2'); font-weight: 500; font-display: swap; }
-* { margin: 0; padding: 0; box-sizing: border-box; }
-body { background: var(--bg); color: var(--text); font-family: var(--font-main); line-height: 1.6; overflow-x: hidden; }
-a { text-decoration: none; color: inherit; transition: 0.3s ease; }
-.container { max-width: 1280px; margin: 0 auto; padding: 0 2rem; }
-/* Header & Nav */
-header { position: fixed; top: 0; width: 100%; z-index: 1000; background: rgba(5,5,5,0.9); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border); padding: 1.2rem 0; }
-nav { display: flex; justify-content: space-between; align-items: center; }
-.logo { font-family: var(--font-display); font-size: 1.5rem; font-weight: 700; letter-spacing: -0.03em; }
-.logo span { color: var(--primary); }
-.nav-links { display: flex; gap: 2.5rem; list-style: none; }
-.nav-links a { font-size: 0.9rem; color: var(--muted); }
-.nav-links a:hover, .nav-links a.active { color: var(--text); }
-.mobile-toggle { display: none; font-size: 1.5rem; cursor: pointer; color: var(--text); }
-/* Botones */
-.btn { display: inline-block; padding: 0.8rem 2rem; border-radius: 4px; font-weight: 600; text-align: center; cursor: pointer; border: none; }
-.btn-primary { background: var(--primary); color: white; }
-.btn-primary:hover { background: #1a6be0; transform: translateY(-2px); }
-/* Tipografía Secciones */
-section { padding: 8rem 0; }
-.section-title { font-family: var(--font-display); font-size: 2.5rem; margin-bottom: 1rem; }
-.section-subtitle { color: var(--primary); text-transform: uppercase; letter-spacing: 0.1em; font-size: 0.8rem; font-weight: 600; margin-bottom: 0.5rem; display: block; }
-/* HERO SECTION CON LOGO CENTRAL */
-.hero {
-min-height: 100vh; display: flex; align-items: center; justify-content: center; position: relative;
-background-image: linear-gradient(rgba(5,5,5,0.7), rgba(5,5,5,0.9)), url('assets/img/hero-bg.jpg');
-background-size: cover; background-position: center; background-attachment: fixed; text-align: center;
-}
-.hero-logo { width: 120px; height: auto; margin-bottom: 2rem; filter: drop-shadow(0 4px 20px rgba(45,127,249,0.3)); }
-.hero-content { max-width: 800px; position: relative; z-index: 2; }
-.hero h1 { font-family: var(--font-display); font-size: 4rem; line-height: 1.1; margin-bottom: 1.5rem; }
-.hero p { font-size: 1.2rem; color: var(--muted); margin-bottom: 2.5rem; max-width: 600px; margin-left: auto; margin-right: auto; }
-/* SECCIÓN TIPOS DE WEB CON FONDO CTA-BACKGROUND */
-.cta-section {
-position: relative; overflow: hidden;
-background-image: linear-gradient(rgba(5,5,5,0.85), rgba(5,5,5,0.95)), url('assets/img/cta-background.webp');
-background-size: cover; background-position: center; background-attachment: fixed;
-}
-.web-types-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 2rem; margin-top: 3rem; }
-.web-type-card {
-background: rgba(15,15,17,0.6); border: 1px solid var(--border); padding: 2rem;
-border-radius: 8px; transition: all 0.3s ease; height: 100%; display: flex; flex-direction: column;
-backdrop-filter: blur(10px);
-}
-.web-type-card:hover { border-color: var(--primary); transform: translateY(-5px); background: rgba(15,15,17,0.8); }
-.web-type-card h3 { font-family: var(--font-display); font-size: 1.2rem; margin-bottom: 1rem; color: var(--text); }
-.web-type-card p { color: var(--muted); font-size: 0.9rem; margin-bottom: 1rem; flex-grow: 1; }
-.web-type-card ul { list-style: none; margin-top: auto; }
-.web-type-card li { font-size: 0.8rem; color: var(--muted); padding: 0.3rem 0; border-bottom: 1px solid rgba(255,255,255,0.05); }
-.web-type-card li::before { content: "•"; color: var(--primary); margin-right: 0.5rem; }
-/* CTA BLOCK FINAL */
-.cta-assessment {
-background: var(--surface); border: 1px solid var(--border); border-radius: 12px;
-padding: 4rem 2rem; text-align: center; margin-top: 6rem; position: relative; overflow: hidden;
-}
-.cta-assessment::before {
-content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0;
-background: radial-gradient(circle at center, rgba(45,127,249,0.1) 0%, transparent 70%);
-pointer-events: none;
-}
-.cta-assessment h2 { font-family: var(--font-display); font-size: 2rem; margin-bottom: 1rem; }
-.cta-assessment p { color: var(--muted); max-width: 600px; margin: 0 auto 2rem; font-size: 1.1rem; }
-/* Footer Base */
-footer { border-top: 1px solid var(--border); padding: 4rem 0 2rem; background: var(--surface); }
-.footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 3rem; margin-bottom: 3rem; }
-.copyright { text-align: center; padding-top: 2rem; border-top: 1px solid var(--border); color: var(--muted); font-size: 0.8rem; }
-.wa-float { position: fixed; bottom: 2rem; right: 2rem; width: 60px; height: 60px; background: #25D366; border-radius: 50%; display: flex; justify-content: center; align-items: center; font-size: 2rem; color: white; z-index: 999; box-shadow: 0 4px 20px rgba(37,211,102,0.4); }
-.wa-float:hover { transform: scale(1.1); }
-/* Animaciones */
-.reveal { opacity: 0; transform: translateY(30px); transition: all 0.8s ease-out; }
-.reveal.active { opacity: 1; transform: translateY(0); }
-/* Responsive */
-@media (max-width: 968px) {
-.nav-links { display: none; position: absolute; top: 100%; left: 0; width: 100%; background: var(--surface); flex-direction: column; padding: 2rem; gap: 1.5rem; border-bottom: 1px solid var(--border); }
-.nav-links.active { display: flex; }
-.mobile-toggle { display: block; }
-.footer-grid { grid-template-columns: 1fr; }
-.hero h1 { font-size: 2.5rem; }
-.hero { background-attachment: scroll; } /* Mejor rendimiento en móvil */
-.cta-section { background-attachment: scroll; }
-}
-@media (max-width: 768px) {
-.hero { background-image: linear-gradient(rgba(5,5,5,0.8), rgba(5,5,5,0.95)), url('assets/img/hero-bg-mobile.jpg'); }
-.hero-logo { width: 80px; margin-bottom: 1.5rem; }
-}
+    /* =========================================
+       VARIABLES Y RESET (COPIADOS DE INDEX.TXT)
+       ========================================= */
+    :root {
+        --bg: #050505; 
+        --surface: #0F0F11; 
+        --primary: #2D7FF9;
+        --text: #FFFFFF; 
+        --muted: #A1A1AA; 
+        --border: rgba(255,255,255,0.08);
+        --font-main: 'Inter', system-ui, sans-serif;
+        --font-display: 'Space Grotesk', system-ui, sans-serif;
+    }
+
+    @font-face { font-family: 'Inter'; src: url('assets/fonts/inter-regular.woff2') format('woff2'); font-weight: 400; font-display: swap; }
+    @font-face { font-family: 'Space Grotesk'; src: url('assets/fonts/space-grotesk-medium.woff2') format('woff2'); font-weight: 500; font-display: swap; }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { background: var(--bg); color: var(--text); font-family: var(--font-main); line-height: 1.6; overflow-x: hidden; }
+    a { text-decoration: none; color: inherit; transition: 0.3s ease; }
+    .container { max-width: 1280px; margin: 0 auto; padding: 0 2rem; }
+
+    /* HEADER & NAV */
+    header { position: fixed; top: 0; width: 100%; z-index: 1000; background: rgba(5,5,5,0.9); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border); padding: 1.2rem 0; }
+    nav { display: flex; justify-content: space-between; align-items: center; }
+    .logo { font-family: var(--font-display); font-size: 1.5rem; font-weight: 700; letter-spacing: -0.03em; }
+    .logo span { color: var(--primary); }
+    .nav-links { display: flex; gap: 2.5rem; list-style: none; }
+    .nav-links a { font-size: 0.9rem; color: var(--muted); }
+    .nav-links a:hover, .nav-links a.active { color: var(--text); }
+    .mobile-toggle { display: none; font-size: 1.5rem; cursor: pointer; color: var(--text); }
+    
+    /* BOTONES */
+    .btn { display: inline-block; padding: 0.8rem 2rem; border-radius: 4px; font-weight: 600; text-align: center; cursor: pointer; border: none; }
+    .btn-primary { background: var(--primary); color: white; }
+    .btn-primary:hover { background: #1a6be0; transform: translateY(-2px); }
+
+    /* TIPOGRAFÍA SECCIONES */
+    section { padding: 8rem 0; }
+    .section-title { font-family: var(--font-display); font-size: 2.5rem; margin-bottom: 1rem; }
+    .section-subtitle { color: var(--primary); text-transform: uppercase; letter-spacing: 0.1em; font-size: 0.8rem; font-weight: 600; margin-bottom: 0.5rem; display: block; }
+
+    /* =========================================
+       ESTILOS ESPECÍFICOS STAFF LOCUTORES
+       ========================================= */
+    .staff-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+        gap: 2.5rem;
+        margin-top: 4rem;
+    }
+
+    .staff-card {
+        background: var(--surface);
+        border: 1px solid var(--border);
+        border-radius: 12px;
+        overflow: hidden;
+        transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+        display: flex;
+        flex-direction: column;
+    }
+
+    .staff-card:hover {
+        border-color: var(--primary);
+        transform: translateY(-8px);
+        box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+    }
+
+    .staff-img-wrapper {
+        width: 100%;
+        height: 320px;
+        overflow: hidden;
+        position: relative;
+        background: #1a1a1d;
+    }
+
+    .staff-img-wrapper img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.6s ease;
+        filter: grayscale(20%);
+    }
+
+    .staff-card:hover .staff-img-wrapper img {
+        transform: scale(1.05);
+        filter: grayscale(0%);
+    }
+
+    .staff-info {
+        padding: 2rem;
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .staff-name {
+        font-family: var(--font-display);
+        font-size: 1.5rem;
+        margin-bottom: 0.75rem;
+        color: var(--text);
+    }
+
+    .staff-bio {
+        color: var(--muted);
+        font-size: 0.95rem;
+        margin-bottom: 1.5rem;
+        flex-grow: 1;
+    }
+
+    /* AUDIO PLAYER CUSTOM */
+    .audio-player-wrapper {
+        margin-top: auto;
+        background: rgba(255,255,255,0.03);
+        padding: 1rem;
+        border-radius: 8px;
+        border: 1px solid rgba(255,255,255,0.05);
+    }
+
+    .audio-label {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        font-size: 0.75rem;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        color: var(--primary);
+        margin-bottom: 0.5rem;
+        font-weight: 600;
+    }
+
+    audio {
+        width: 100%;
+        height: 36px;
+        filter: invert(1) hue-rotate(180deg) brightness(0.9) contrast(1.2);
+        border-radius: 4px;
+    }
+    
+    /* Soporte visual para navegadores que no filtran bien el audio nativo */
+    audio::-webkit-media-controls-panel {
+        background: var(--surface);
+    }
+
+    /* FOOTER BASE */
+    footer { border-top: 1px solid var(--border); padding: 4rem 0 2rem; background: var(--surface); }
+    .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 3rem; margin-bottom: 3rem; }
+    .copyright { text-align: center; padding-top: 2rem; border-top: 1px solid var(--border); color: var(--muted); font-size: 0.8rem; }
+    .wa-float { position: fixed; bottom: 2rem; right: 2rem; width: 60px; height: 60px; background: #25D366; border-radius: 50%; display: flex; justify-content: center; align-items: center; font-size: 2rem; color: white; z-index: 999; box-shadow: 0 4px 20px rgba(37,211,102,0.4); }
+    .wa-float:hover { transform: scale(1.1); }
+
+    /* ANIMACIONES REVEAL */
+    .reveal { opacity: 0; transform: translateY(30px); transition: all 0.8s ease-out; }
+    .reveal.active { opacity: 1; transform: translateY(0); }
+
+    /* RESPONSIVE */
+    @media (max-width: 968px) {
+        .nav-links { display: none; position: absolute; top: 100%; left: 0; width: 100%; background: var(--surface); flex-direction: column; padding: 2rem; gap: 1.5rem; border-bottom: 1px solid var(--border); }
+        .nav-links.active { display: flex; }
+        .mobile-toggle { display: block; }
+        .footer-grid { grid-template-columns: 1fr; }
+        .staff-grid { grid-template-columns: 1fr; }
+    }
 </style>
+
+<!-- SCHEMA.ORG JSON-LD -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": "Staff de Locutores Radio del Bosque",
+  "numberOfItems": 4,
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "item": {
+        "@type": "Person",
+        "name": "Marisa Waters",
+        "jobTitle": "Locutora Nacional y Docente ISER",
+        "description": "Conductora en Radio Provincia AM 1270, Radio Rocha AM 1570 y Cool Radio 103.7. Voz institucional de Radio del Bosque La Plata.",
+        "image": "https://www.vertexdigital.com.ar/assets/img/marisa-waters.jpg"
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "item": {
+        "@type": "Person",
+        "name": "Karina Lisa",
+        "jobTitle": "Locutora Nacional y Periodista",
+        "description": "Conductora en FM Cielo 103.5, Grupo RED92 Cada Día Más, Diario Hoy, La Redonda 100.3 y Radio Ciudad 93.3.",
+        "image": "https://www.vertexdigital.com.ar/assets/img/karina-lisa.jpg"
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "item": {
+        "@type": "Person",
+        "name": "Viviana Leiva",
+        "jobTitle": "Conductora de Radio",
+        "description": "Integró Red92, Cool Radio FM 103.7, Mix Saladillo y actualmente conduce programas en Radio del Bosque La Plata.",
+        "image": "https://www.vertexdigital.com.ar/assets/img/viviana-leiva.jpg"
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 4,
+      "item": {
+        "@type": "Person",
+        "name": "Rocío Escalante",
+        "jobTitle": "Locutora Nacional",
+        "description": "Integrante de Radio Rocha AM 1570 en 'Pasajeros del Espacio' y FM Auténtica.",
+        "image": "https://www.vertexdigital.com.ar/assets/img/rocio-escalante.jpg"
+      }
+    }
+  ]
+}
+</script>
 </head>
 <body>
+
 <header>
 <div class="container">
 <nav>
 <a href="index.html" class="logo">VERTEX<span>.</span></a>
 <ul class="nav-links" id="navLinks">
-<li><a href="index.html" class="active">Inicio</a></li>
-<li><a href="nosotros.html">Nosotros</a></li>
-<li><a href="servicios.html">Servicios</a></li>
-<li><a href="audio-branding.html">Audio Branding</a></li>
-<li><a href="portfolio.html">Portfolio</a></li>
-<li><a href="contacto.html" class="btn btn-primary" style="padding: 0.6rem 1.5rem;">Contacto</a></li>
+    <li><a href="index.html">Inicio</a></li>
+    <li><a href="nosotros.html">Nosotros</a></li>
+    <li><a href="servicios.html">Servicios</a></li>
+    <li><a href="audio-branding.html">Audio Branding</a></li>
+    <li><a href="staff.html" class="active">Staff de Locutores</a></li>
+    <li><a href="portfolio.html">Portfolio</a></li>
+    <li><a href="contacto.html" class="btn btn-primary" style="padding: 0.6rem 1.5rem;">Contacto</a></li>
 </ul>
-<div class="mobile-toggle" onclick="document.getElementById('navLinks').classList.toggle('active')">☰</div>
+<div class="mobile-toggle" onclick="document.getElementById('navLinks').classList.toggle('active')" aria-label="Abrir menú">☰</div>
 </nav>
 </div>
 </header>
+
 <main>
-<!-- HERO SECTION CON LOGO TRANSPARENTE CENTRADO -->
-<section class="hero">
-<div class="container hero-content reveal">
-<img src="assets/img/transparente.png" alt="Vertex Studio Logo" class="hero-logo">
-<span class="section-subtitle">Agencia Digital Integral</span>
-<h1>Elevamos tu presencia digital</h1>
-<p>Diseño web estratégico, identidad sonora y producción audiovisual de alto impacto para marcas que lideran.</p>
-<a href="contacto.html" class="btn btn-primary">Iniciar Proyecto</a>
-</div>
-</section>
-<!-- NUEVA SECCIÓN: TIPOS DE PÁGINAS WEB CON FONDO CTA-BACKGROUND.WEBP -->
-<section class="cta-section">
-<div class="container">
-<div class="reveal" style="text-align: center; max-width: 800px; margin: 0 auto 4rem;">
-<span class="section-subtitle">Soluciones Web</span>
-<h2 class="section-title">Tipos de páginas web</h2>
-<p style="color: var(--muted);">Cada negocio tiene una necesidad única. Desarrollamos la plataforma exacta para tus objetivos.</p>
-</div>
-<div class="web-types-grid reveal">
-<div class="web-type-card">
-<h3>Landing Page</h3>
-<p>Página de aterrizaje optimizada para conversión específica (ventas, leads, descargas).</p>
-<ul><li>Alta velocidad de carga</li><li>Formularios integrados</li><li>Diseño persuasivo</li></ul>
-</div>
-<div class="web-type-card">
-<h3>Sitio Institucional</h3>
-<p>Presencia corporativa sólida que comunica valores, historia y servicios de forma clara.</p>
-<ul><li>Navegación intuitiva</li><li>Sección de equipo</li><li>Integración SEO</li></ul>
-</div>
-<div class="web-type-card">
-<h3>Tienda Online (E-commerce)</h3>
-<p>Plataforma completa de venta con carrito, pasarelas de pago y gestión de stock.</p>
-<ul><li>Pagos seguros</li><li>Gestión de inventario</li><li>Panel administrativo</li></ul>
-</div>
-<div class="web-type-card">
-<h3>Catálogo Digital</h3>
-<p>Showcase interactivo de productos o servicios sin proceso de compra directa.</p>
-<ul><li>Fichas detalladas</li><li>Filtros avanzados</li><li>Descarga de PDFs</li></ul>
-</div>
-<div class="web-type-card">
-<h3>Blog Profesional</h3>
-<p>Centro de contenidos para posicionamiento orgánico y autoridad de marca.</p>
-<ul><li>Gestor de contenidos</li><li>Comentarios y social</li><li>Newsletter integrada</li></ul>
-</div>
-<div class="web-type-card">
-<h3>Portal de Noticias</h3>
-<p>Sistema robusto para publicación masiva de contenido periodístico o actualizaciones.</p>
-<ul><li>Categorías dinámicas</li><li>Búsqueda avanzada</li><li>Monetización ads</li></ul>
-</div>
-<div class="web-type-card">
-<h3>Plataforma Educativa</h3>
-<p>LMS para cursos online, membresías y seguimiento de estudiantes.</p>
-<ul><li>Reproductor video</li><li>Certificados automáticos</li><li>Zona de alumnos</li></ul>
-</div>
-<div class="web-type-card">
-<h3>Radio / Streaming</h3>
-<p>Web especializada con reproductor en vivo, programación y archivo de podcasts.</p>
-<ul><li>Player persistente</li><li>Metadatos en tiempo real</li><li>Chat integrado</li></ul>
-</div>
-<div class="web-type-card">
-<h3>Restaurantes / Hoteles</h3>
-<p>Experiencia visual inmersiva con reservas, menús digitales y galerías.</p>
-<ul><li>Sistema de reservas</li><li>Menú QR interactivo</li><li>Mapa y ubicación</li></ul>
-</div>
-<div class="web-type-card">
-<h3>Desarrollo a Medida</h3>
-<p>Aplicaciones web complejas, intranets, dashboards y soluciones personalizadas.</p>
-<ul><li>Arquitectura escalable</li><li>APIs personalizadas</li><li>Seguridad enterprise</li></ul>
-</div>
-</div>
-<!-- LLAMADO A LA ACCIÓN FINAL -->
-<div class="cta-assessment reveal">
-<h2>¿No sabés qué tipo de página web necesita tu proyecto?</h2>
-<p>Nosotros te asesoramos sin compromiso y te ayudamos a elegir la solución ideal según tu actividad, objetivos y presupuesto.</p>
-<p style="font-weight: 600; color: var(--text); margin-bottom: 2rem;">Consultanos por el precio.</p>
-<a href="contacto.html" class="btn btn-primary">Solicitar presupuesto</a>
-</div>
-</div>
+<section>
+    <div class="container">
+        <div class="reveal" style="text-align: center; max-width: 800px; margin: 0 auto 2rem;">
+            <span class="section-subtitle">Nuestras Voces</span>
+            <h1 class="section-title">Staff de Locutores</h1>
+            <p style="color: var(--muted); font-size: 1.1rem;">Profesionales con trayectoria nacional que dan identidad sonora a Radio del Bosque La Plata y a las marcas más importantes del país.</p>
+        </div>
+
+        <div class="staff-grid">
+            
+            <!-- MARISA WATERS -->
+            <article class="staff-card reveal" itemscope itemtype="https://schema.org/Person">
+                <div class="staff-img-wrapper">
+                    <img src="assets/img/marisa-waters.jpg" alt="Retrato profesional de Marisa Waters, locutora nacional y docente" loading="lazy" itemprop="image" onerror="this.src='https://placehold.co/600x800/0F0F11/2D7FF9?text=Marisa+Waters'">
+                </div>
+                <div class="staff-info">
+                    <h2 class="staff-name" itemprop="name">Marisa Waters</h2>
+                    <p class="staff-bio" itemprop="description">Locutora Nacional, Docente de Cátedra de Doblaje y de Práctica Integral de Radio y Locución (ISER). Conductora en Radio Provincia AM 1270, Radio Rocha AM 1570 y Cool Radio 103.7. Voz institucional de Radio del Bosque La Plata.</p>
+                    
+                    <div class="audio-player-wrapper">
+                        <div class="audio-label">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"></path><path d="M19 10v2a7 7 0 0 1-14 0v-2"></path><line x1="12" y1="19" x2="12" y2="23"></line><line x1="8" y1="23" x2="16" y2="23"></line></svg>
+                            Demo Reel
+                        </div>
+                        <audio controls preload="none" aria-label="Demo de voz de Marisa Waters">
+                            <source src="assets/audio/demo.mp3" type="audio/mpeg">
+                            Tu navegador no soporta el elemento de audio.
+                        </audio>
+                    </div>
+                </div>
+            </article>
+
+            <!-- KARINA LISA -->
+            <article class="staff-card reveal" itemscope itemtype="https://schema.org/Person">
+                <div class="staff-img-wrapper">
+                    <img src="assets/img/karina-lisa.jpg" alt="Retrato profesional de Karina Lisa, locutora y periodista" loading="lazy" itemprop="image" onerror="this.src='https://placehold.co/600x800/0F0F11/2D7FF9?text=Karina+Lisa'">
+                </div>
+                <div class="staff-info">
+                    <h2 class="staff-name" itemprop="name">Karina Lisa</h2>
+                    <p class="staff-bio" itemprop="description">Locutora Nacional y Periodista. Conductora en FM Cielo 103.5, Grupo RED92 Cada Día Más, Diario Hoy, La Redonda 100.3 y Radio Ciudad 93.3.</p>
+                    
+                    <div class="audio-player-wrapper">
+                        <div class="audio-label">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"></path><path d="M19 10v2a7 7 0 0 1-14 0v-2"></path><line x1="12" y1="19" x2="12" y2="23"></line><line x1="8" y1="23" x2="16" y2="23"></line></svg>
+                            Demo Reel
+                        </div>
+                        <audio controls preload="none" aria-label="Demo de voz de Karina Lisa">
+                            <source src="assets/audio/demo.mp3" type="audio/mpeg">
+                            Tu navegador no soporta el elemento de audio.
+                        </audio>
+                    </div>
+                </div>
+            </article>
+
+            <!-- VIVIANA LEIVA -->
+            <article class="staff-card reveal" itemscope itemtype="https://schema.org/Person">
+                <div class="staff-img-wrapper">
+                    <img src="assets/img/viviana-leiva.jpg" alt="Retrato profesional de Viviana Leiva, conductora de radio" loading="lazy" itemprop="image" onerror="this.src='https://placehold.co/600x800/0F0F11/2D7FF9?text=Viviana+Leiva'">
+                </div>
+                <div class="staff-info">
+                    <h2 class="staff-name" itemprop="name">Viviana Leiva</h2>
+                    <p class="staff-bio" itemprop="description">Conductora. Integró Red92 Cada Día Más, Cool Radio FM 103.7, Mix Saladillo 92.9, Urbana FM 99.1 (25 de Mayo) y actualmente conduce programas en Radio del Bosque La Plata.</p>
+                    
+                    <div class="audio-player-wrapper">
+                        <div class="audio-label">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"></path><path d="M19 10v2a7 7 0 0 1-14 0v-2"></path><line x1="12" y1="19" x2="12" y2="23"></line><line x1="8" y1="23" x2="16" y2="23"></line></svg>
+                            Demo Reel
+                        </div>
+                        <audio controls preload="none" aria-label="Demo de voz de Viviana Leiva">
+                            <source src="assets/audio/demo.mp3" type="audio/mpeg">
+                            Tu navegador no soporta el elemento de audio.
+                        </audio>
+                    </div>
+                </div>
+            </article>
+
+            <!-- ROCÍO ESCALANTE -->
+            <article class="staff-card reveal" itemscope itemtype="https://schema.org/Person">
+                <div class="staff-img-wrapper">
+                    <img src="assets/img/rocio-escalante.jpg" alt="Retrato profesional de Rocío Escalante, locutora nacional" loading="lazy" itemprop="image" onerror="this.src='https://placehold.co/600x800/0F0F11/2D7FF9?text=Rocio+Escalante'">
+                </div>
+                <div class="staff-info">
+                    <h2 class="staff-name" itemprop="name">Rocío Escalante</h2>
+                    <p class="staff-bio" itemprop="description">Locutora Nacional. Integrante de Radio Rocha AM 1570 en el programa "Pasajeros del Espacio" y FM Auténtica.</p>
+                    
+                    <div class="audio-player-wrapper">
+                        <div class="audio-label">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"></path><path d="M19 10v2a7 7 0 0 1-14 0v-2"></path><line x1="12" y1="19" x2="12" y2="23"></line><line x1="8" y1="23" x2="16" y2="23"></line></svg>
+                            Demo Reel
+                        </div>
+                        <audio controls preload="none" aria-label="Demo de voz de Rocío Escalante">
+                            <source src="assets/audio/demo.mp3" type="audio/mpeg">
+                            Tu navegador no soporta el elemento de audio.
+                        </audio>
+                    </div>
+                </div>
+            </article>
+
+        </div>
+    </div>
 </section>
 </main>
+
 <footer>
 <div class="container">
 <div class="footer-grid">
-<div>
-<a href="index.html" class="logo">VERTEX<span>.</span></a>
-<p style="color: var(--muted); margin-top: 1rem; max-width: 300px;">Soluciones digitales integrales para empresas que buscan liderar su industria.</p>
-</div>
-<div>
-<h5>Navegación</h5>
-<ul style="list-style: none; margin-top: 1rem;">
-<li style="margin-bottom: 0.75rem"><a href="nosotros.html" style="color: var(--muted)">Nosotros</a></li>
-<li style="margin-bottom: 0.75rem"><a href="servicios.html" style="color: var(--muted)">Servicios</a></li>
-<li style="margin-bottom: 0.75rem"><a href="portfolio.html" style="color: var(--muted)">Portfolio</a></li>
-</ul>
-</div>
-<div>
-<h5>Contacto</h5>
-<ul style="list-style: none; margin-top: 1rem; color: var(--muted)">
-<li style="margin-bottom: 0.75rem">+54 9 221 602 6192</li>
-<li style="margin-bottom: 0.75rem">hola@vertexdigital.com.ar</li>
-</ul>
-</div>
+    <div>
+        <a href="index.html" class="logo">VERTEX<span>.</span></a>
+        <p style="color: var(--muted); margin-top: 1rem; max-width: 300px;">Soluciones digitales integrales para empresas que buscan liderar su industria.</p>
+    </div>
+    <div>
+        <h5>Navegación</h5>
+        <ul style="list-style: none; margin-top: 1rem;">
+            <li style="margin-bottom: 0.75rem"><a href="nosotros.html" style="color: var(--muted)">Nosotros</a></li>
+            <li style="margin-bottom: 0.75rem"><a href="servicios.html" style="color: var(--muted)">Servicios</a></li>
+            <li style="margin-bottom: 0.75rem"><a href="portfolio.html" style="color: var(--muted)">Portfolio</a></li>
+        </ul>
+    </div>
+    <div>
+        <h5>Contacto</h5>
+        <ul style="list-style: none; margin-top: 1rem; color: var(--muted)">
+            <li style="margin-bottom: 0.75rem">+54 9 221 602 6192</li>
+            <li style="margin-bottom: 0.75rem">hola@vertexdigital.com.ar</li>
+        </ul>
+    </div>
 </div>
 <div class="copyright">© 2026 Vertex Studio. Todos los derechos reservados.</div>
 </div>
 </footer>
+
 <a href="https://wa.me/5492216026192?text=Hola%20Vertex%2C%20me%20interesa%20consultar%20por..." target="_blank" class="wa-float" aria-label="Chat en WhatsApp">💬</a>
+
 <script>
 const observer = new IntersectionObserver((entries) => {
-entries.forEach(entry => { if(entry.isIntersecting) entry.target.classList.add('active'); });
+    entries.forEach(entry => { if(entry.isIntersecting) entry.target.classList.add('active'); });
 }, { threshold: 0.1 });
 document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 </script>
