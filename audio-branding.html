@@ -55,13 +55,25 @@
         background: var(--surface);
         border: 1px solid var(--border);
         border-radius: 12px;
-        padding: 1.5rem;
+        padding: 0;
+        overflow: hidden;
         transition: transform 0.3s ease, border-color 0.3s ease;
     }
 
     .audio-card:hover {
         border-color: var(--primary);
         transform: translateY(-5px);
+    }
+
+    .audio-card-content {
+        padding: 1.5rem;
+    }
+
+    .audio-img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+        border-bottom: 1px solid var(--border);
     }
 
     .audio-category {
@@ -141,62 +153,80 @@
             
             <!-- ITEM 1 -->
             <div class="audio-card">
-                <span class="audio-category">Publicidad</span>
-                <h3 class="audio-title">Publicidad Radial</h3>
-                <p class="audio-desc">Producción comercial dinámica orientada a ventas rápidas con diseño sonoro energético.</p>
-                <audio controls preload="none">
-                    <source src="assets/audio/demo-publicidad.mp3" type="audio/mpeg">
-                </audio>
+                <img src="assets/img/portfolio/publicidad.jpg" alt="Publicidad Radial" class="audio-img">
+                <div class="audio-card-content">
+                    <span class="audio-category">Publicidad</span>
+                    <h3 class="audio-title">Publicidad Radial</h3>
+                    <p class="audio-desc">Producción comercial dinámica orientada a ventas rápidas con diseño sonoro energético.</p>
+                    <audio controls preload="none">
+                        <source src="assets/audio/demo-publicidad.mp3" type="audio/mpeg">
+                    </audio>
+                </div>
             </div>
 
             <!-- ITEM 2 -->
             <div class="audio-card">
-                <span class="audio-category">Vestimenta Artística</span>
-                <h3 class="audio-title">Identificación Radio FM</h3>
-                <p class="audio-desc">Identificación institucional moderna con mezcla de voces y efectos atmosféricos.</p>
-                <audio controls preload="none">
-                    <source src="assets/audio/demo-vestimenta.mp3" type="audio/mpeg">
-                </audio>
+                <img src="assets/img/portfolio/artistica.jpg" alt="Identificación Radio FM" class="audio-img">
+                <div class="audio-card-content">
+                    <span class="audio-category">Vestimenta Artística</span>
+                    <h3 class="audio-title">Identificación Radio FM</h3>
+                    <p class="audio-desc">Identificación institucional moderna con mezcla de voces y efectos atmosféricos.</p>
+                    <audio controls preload="none">
+                        <source src="assets/audio/demo-vestimenta.mp3" type="audio/mpeg">
+                    </audio>
+                </div>
             </div>
 
             <!-- ITEM 3 -->
             <div class="audio-card">
-                <span class="audio-category">Jingles Cantados</span>
-                <h3 class="audio-title">Jingle de Identificación</h3>
-                <p class="audio-desc">Composición original pegadiza con estribillo memorable y producción pop moderna.</p>
-                <audio controls preload="none">
-                    <source src="assets/audio/demo-jingles.mp3" type="audio/mpeg">
-                </audio>
+                <img src="assets/img/portfolio/jingles.jpg" alt="Jingle de Identificación" class="audio-img">
+                <div class="audio-card-content">
+                    <span class="audio-category">Jingles Cantados</span>
+                    <h3 class="audio-title">Jingle de Identificación</h3>
+                    <p class="audio-desc">Composición original pegadiza con estribillo memorable y producción pop moderna.</p>
+                    <audio controls preload="none">
+                        <source src="assets/audio/demo-jingles.mp3" type="audio/mpeg">
+                    </audio>
+                </div>
             </div>
 
             <!-- ITEM 4 -->
             <div class="audio-card">
-                <span class="audio-category">IVR Telefónico</span>
-                <h3 class="audio-title">Central Telefónica Corporativa</h3>
-                <p class="audio-desc">Locución institucional clara y profesional para sistemas de atención automática.</p>
-                <audio controls preload="none">
-                    <source src="assets/audio/demo-ivr.mp3" type="audio/mpeg">
-                </audio>
+                <img src="assets/img/portfolio/IVR.jpg" alt="Central Telefónica Corporativa" class="audio-img">
+                <div class="audio-card-content">
+                    <span class="audio-category">IVR Telefónico</span>
+                    <h3 class="audio-title">Central Telefónica Corporativa</h3>
+                    <p class="audio-desc">Locución institucional clara y profesional para sistemas de atención automática.</p>
+                    <audio controls preload="none">
+                        <source src="assets/audio/demo-ivr.mp3" type="audio/mpeg">
+                    </audio>
+                </div>
             </div>
 
             <!-- ITEM 5 -->
             <div class="audio-card">
-                <span class="audio-category">Relatos y Cuentos</span>
-                <h3 class="audio-title">Narrativa Sonora</h3>
-                <p class="audio-desc">Producción de cuentos y relatos con ambientación inmersiva y locución expresiva.</p>
-                <audio controls preload="none">
-                    <source src="assets/audio/demo-relatos.mp3" type="audio/mpeg">
-                </audio>
+                <img src="assets/img/portfolio/relatos.jpg" alt="Narrativa Sonora" class="audio-img">
+                <div class="audio-card-content">
+                    <span class="audio-category">Relatos y Cuentos</span>
+                    <h3 class="audio-title">Narrativa Sonora</h3>
+                    <p class="audio-desc">Producción de cuentos y relatos con ambientación inmersiva y locución expresiva.</p>
+                    <audio controls preload="none">
+                        <source src="assets/audio/demo-relatos.mp3" type="audio/mpeg">
+                    </audio>
+                </div>
             </div>
 
             <!-- ITEM 6 -->
             <div class="audio-card">
-                <span class="audio-category">Cortinas Musicales</span>
-                <h3 class="audio-title">Bed Tracks Profesionales</h3>
-                <p class="audio-desc">Música de fondo libre de regalías diseñada para acompañar contenidos audiovisuales.</p>
-                <audio controls preload="none">
-                    <source src="assets/audio/demo-cortinas.mp3" type="audio/mpeg">
-                </audio>
+                <img src="assets/img/portfolio/cortinas.jpg" alt="Bed Tracks Profesionales" class="audio-img">
+                <div class="audio-card-content">
+                    <span class="audio-category">Cortinas Musicales</span>
+                    <h3 class="audio-title">Bed Tracks Profesionales</h3>
+                    <p class="audio-desc">Música de fondo libre de regalías diseñada para acompañar contenidos audiovisuales.</p>
+                    <audio controls preload="none">
+                        <source src="assets/audio/demo-cortinas.mp3" type="audio/mpeg">
+                    </audio>
+                </div>
             </div>
 
         </div>
